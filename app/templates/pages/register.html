@@ -1,0 +1,22 @@
+{% extends 'layout/default.html' %}
+
+{% block body %}
+<div style="text-align: center; margin-top: 75px;">
+    <form action="/register" method="POST" target="_self" enctype="application/json">
+        <strong style="color: whitesmoke; font-size: 50px;" class="buttongreen">Wine Lister</strong>
+        <p style="margin-top: 100px;";"></p>
+        <label for="Username" style="color: whitesmoke;"> Nom de compte</label>
+            <p></p>
+            <input type="text" id="Username" name="username" required>
+            <p></p>
+        <label for="Password" style="color: whitesmoke;"> Mot de passe </label>
+            <p></p>
+            <input type="text" id="Password" name="password" required>
+            <p></p>
+            <p style="margin-top: 20px;"></p>
+            <button type="submit" class="buttongreen2">
+                Créer son compte
+            </button>
+    </form>
+</div>
+{% endblock body %}

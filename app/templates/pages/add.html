@@ -1,0 +1,27 @@
+{% extends 'layout/default.html' %}
+
+{% block body %}
+<div style="text-align: center; margin-top: 75px;">
+    <form action="/task/add" method="POST" target="_self" enctype="application/json">
+        <strong style="color: whitesmoke; padding: 30px 30px;"class="buttongreen">Wine Lister</strong>
+        <p style="margin-top: 70px;"></p>
+        <div class="buttongreen2">
+        <label for="Name" style="color: whitesmoke"> Nom du vin</label>
+        <p></p>
+            <input type="text" id="name" name="name" required>
+            <p></p>
+        <label for="Password" style="color: whitesmoke"> Description du vin </label>
+        <p></p>
+            <input type="text" id="task_description" name="task_description" required>
+            <p></p>
+        <label for="Quantity" style="color: whitesmoke"> Quantité </label>
+        <p></p>
+            <input type="number" id="quantity" name="quantity" required>
+        </div>
+        <p style="margin-top: 30px;"></p>
+        <button type="submit" class="buttongreen2">
+            Ajouter
+        </button>
+    </form>
+</div>
+{% endblock body %}

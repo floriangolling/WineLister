@@ -1,0 +1,27 @@
+{% extends 'layout/default.html' %}
+
+{% block body %}
+    {% if tasks %}
+      {% for task in tasks %}
+        <div>
+            <form action ="/user/task/id" method="POST">
+                <input type="hidden" value='1' name=change>
+                <p>
+                    <p style=border-style:double>[Nom]</p> <input name=name type="text" value={{ task.task_name }} required>
+                    <p style=border-style:double>[Description] </p> <input name=desc type="text" value={{ task.task_description }} required>
+                    <p style=border-style:double>[Quantité] </p> <input name=quantity type="number" value={{ task.task_quantity }} required>
+                    <input type="hidden" value={{task.id[0]}} name=id_t>
+            <div>
+              <svg height="2" width="50000">
+                <line x1="0" y1="0" x2=10000px y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+              </svg>
+                  <button type="submit">
+                    Modifier ce vin
+                  </button>
+              </form>
+            </div>
+          </p>
+        </div>
+      {% endfor %}
+    {% endif %}
+{% endblock body %}
